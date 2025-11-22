@@ -3,8 +3,12 @@ from fastapi import FastAPI, HTTPException
 app = FastAPI()
 
 # "ןורכיזב "םינותנ דסמ
-books = []
-counter = 1
+books = [
+    {"id": 1, "title": "Book 1", "author": "Avi asolin"},
+    {"id": 2, "title": "Book 2", "author": "Nadav Paldman"},
+    {"id": 3, "title": "Book 3", "author": "Aviel Garsholker"},
+]
+counter = 4
 
 
 @app.get("/books")
