@@ -4,9 +4,9 @@ app = FastAPI()
 
 # "ןורכיזב "םינותנ דסמ
 books = [
-    {"id": 1, "title": "Book 1", "author": "Avi asolin"},
-    {"id": 2, "title": "Book 2", "author": "Nadav Paldman"},
-    {"id": 3, "title": "Book 3", "author": "Aviel Garsholker"},
+    {"id": 1, "title": "Book 1", "author": "Avi asolin" , "year": 1996},
+    {"id": 2, "title": "Book 2", "author": "Nadav Paldman" , "year": 1998},
+    {"id": 3, "title": "Book 3", "author": "Aviel Garsholker" , "year": 2000},
 ]
 counter = 4
 
@@ -31,7 +31,8 @@ def add_book(book: dict):
         "id": counter,
 
         "title": book.get("title"),
-        "author": book.get("author")
+        "author": book.get("author"),
+        "year": book.get("year")
     }
     books.append(new_book)
     counter += 1
